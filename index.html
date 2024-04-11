@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BlockHeads</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">TBh</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="https://docs.google.com/presentation/d/1KDOFTyeSFVTWfQvsOSiDMo93767b2oXDFv0ffbvW37o/edit?usp=sharing">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">DESIGN</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" placeholder="Type To Search">
+                <button class="btn">Search</button>
+            </div>
+        </div> 
+
+        <div class="content">
+            <h1><span></span></h1>
+
+            <!-- Modified login form -->
+            <div class="form">
+                <h2>Login Here</h2>
+                <input type="email" name="email" placeholder="Enter Email Here">
+                <input type="password" name="password" placeholder="Enter Password Here">
+                <button class="btnn"><a href="#">Login</a></button>
+
+                <p class="link">Don't have an account<br>
+                <a href="https://support.google.com/accounts/answer/27441?hl=en">Sign up </a> here</p>
+                <p class="liw">Log in with</p>
+
+                <div class="icons">
+                    <a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://twitter.com/?lang=en"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://accounts.google.com/v3/signin/identifier?ifkv=ASKXGp1019KAYuzJznD4AEDfGCA0o1xQAVqoBhVqeqNUahVY8ZqT5bTNI1mkeDLsLHqx1Hf_EuTq&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1610239743%3A1706687906240064&theme=glif"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="https://www.skype.com/en/"><ion-icon name="logo-skype"></ion-icon></a>
+                </div>
+            </div>
+
+            <!-- Four Boxes as Buttons -->
+            <div class="button-boxes">
+                <div class="box" onclick="displaynftcontent()" style="margin-left: -370px;">NFTs</div>
+                <div class="box" onclick="displayWeb3Content()" style="margin-left: -750px;">Web3</div>
+                <div class="box" onclick="displayblockcontent()"style="margin-left: -750px;">Blockchain</div>
+                <div class="box" onclick="displaycryptocontent()" style="margin-left: -750px;">Cryptocurrency</div>
+            </div>
+
+            <!-- Content for NFTs tab -->
+            <div class="tab-content" id="NFTs" style="background-image: url('NFT.jpg'); background-size: cover; background-position: center;"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+        function displayWeb3Content() {
+            // Open the image in a new tab
+            window.open('BH1.png', '_blank');
+        }
+        function displaycryptocontent(){
+            window.open('CY11.png');
+        }
+        function displaynftcontent(){
+            window.open('NFT.png');
+        }
+        function displayblockcontent(){
+            window.open('Blockchain.png');
+        }
+        // Form validation script
+        document.querySelector('.btnn').addEventListener('click', function () {
+            var email = document.querySelector('input[name="email"]').value;
+            var password = document.querySelector('input[name="password"]').value;
+
+            if (email === '' || password === '') {
+                alert('Please enter both email and password');
+            } else {
+                alert('Form submitted successfully!');
+            }
+        });
+    </script>
+</body>
+</html>
